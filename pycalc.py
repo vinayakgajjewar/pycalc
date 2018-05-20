@@ -25,5 +25,5 @@ def eval_integral(a, b, rects):
 
     return sum
 
-print("Derivative: " + str(eval_derivative(1, 0.1)))
-print("Integral: " + str(eval_integral(2, 4, 2)))
+print("Derivative: " + str(eval_derivative(1, 0.000000000001)))
+print("Integral: " + str(eval_integral(2, 4, 100000000)))
