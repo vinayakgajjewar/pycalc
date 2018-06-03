@@ -5,7 +5,7 @@ var sampleFunc = function(x) {
   // Parabola!
   return x * x + 1;
 }
-var evalDerivative = function(func, x, step) {
+var evalDeriv = function(func, x, step) {
   // Calculate the derivative of a function "func" at a position "x"
   // Set step to a smaller val for more precise results
 
@@ -17,4 +17,4 @@ var evalDerivative = function(func, x, step) {
   return (y_b - y_a) / (b - a);
 }
 
-console.log(evalDerivative(sampleFunc, 2, 0.01));
+console.log(evalDeriv(sampleFunc, 2, 0.01));
