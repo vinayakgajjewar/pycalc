@@ -32,5 +32,5 @@ var evalInt = function(func, a, b, rects) {
   return sum;
 }
 
-console.log(evalDeriv(sampleFunc, 2, 1E-8));
-console.log(evalInt(sampleFunc, 0, 4, 1E8));
+console.log("12: " + evalDeriv(sampleFunc, 2, 1E-5)); // Should be 12
+console.log("64: " + evalInt(sampleFunc, 0, 4, 1E5)); // Should be 64
