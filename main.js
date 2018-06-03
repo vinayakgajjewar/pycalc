@@ -3,7 +3,7 @@
 var sampleFunc = function(x) {
   // Simple sample function
   // Parabola!
-  return x * x + 1;
+  return 3 * (x * x);
 }
 var evalDeriv = function(func, x, step) {
   // Calculate the derivative of a function "func" at a position "x"
@@ -17,4 +17,20 @@ var evalDeriv = function(func, x, step) {
   return (y_b - y_a) / (b - a);
 }
 
-console.log(evalDeriv(sampleFunc, 2, 0.01));
+var evalInt = function(func, a, b, rects) {
+  // rect is the # of rects to consider for the Reimann sum
+  // Set it to a larger val for a better estimate
+
+  sum = 0;
+
+  width = (b - a) / rects;
+
+  for (i = 0; i < rects; i++) {
+    sum += width * func(a + (width * i));
+  }
+
+  return sum;
+}
+
+console.log(evalDeriv(sampleFunc, 2, 0.00000001));
+console.log(evalInt(sampleFunc, 0, 4, 100000000));
